@@ -7,7 +7,7 @@ let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
 	let json_response = {};
-	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
+	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc'  && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
 
 		const data = {
 			consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
