@@ -57,8 +57,6 @@ app.post("/getWalmartCredentials", function(request, response){
 			"CONSUMERID": hashList["WM_CONSUMER.ID"],
 			"KEY_VERSION": hashList["WM_SEC.KEY_VERSION"],
 		}
-	
-		response.setHeader('Content-Type', 'application/json');
 
 	} else {
 
@@ -69,6 +67,7 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	}
 
+	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(response));
 	
 });
