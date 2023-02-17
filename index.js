@@ -6,6 +6,7 @@ import fetch from "node-fetch";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
+	let body = "";
 	request.on('data', chunk => {
         body += chunk.toString(); // convert Buffer to string
     });
