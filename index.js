@@ -4,21 +4,24 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 
 let app = express();
-// express.json()
-app.use(express.json({extended: true}))
-
-// express.urlencoded()
-// app.use(express.urlencoded())
-
 app.post("/getWalmartCredentials", function(request, response){
 
-	console.log(request.body);
+	request.on('data', chunk => {
+        body += chunk.toString(); // convert Buffer to string
+    });
+
+	request.on('end', () => {
+        console.log(body);
+        // res.end('ok');
+    });
+
+	// console.log(request.body);
 	let json_response = {};
 	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
 
 		if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH67Fp4Sjs4qMqRXe9zpVcUc'){
 
-			console.log(request.query);
+			// console.log(request.query);
 			const data = {
 				consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
 				privateKey: `MIIEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc9Grdb08+8OQ
