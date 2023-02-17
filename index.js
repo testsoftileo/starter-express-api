@@ -12,6 +12,8 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	}
 
+	console.log("55366");
+
 	const data = {
 		consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
 		privateKey: `MIIEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc9Grdb08+8OQ
