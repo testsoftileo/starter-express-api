@@ -58,14 +58,23 @@ app.post("/getWalmartCredentials", function(request, response){
 			"KEY_VERSION": hashList["WM_SEC.KEY_VERSION"],
 		}
 
+		json_response = {
+			"request": true,
+			"data":	generateWalmartHeaders,
+			"error": false,
+			"error_type": false
+		}
+
 		console.log('123456');
 
 	} else {
 
 		console.log('123');
 		json_response = {
-			"request":	false,
-			"error":	"Missing required fields! Please try again..."
+			"request": false,
+			"data": false,
+			"error": "Missing required fields! Please try again...",
+			"error_type": 1
 		}
 
 	}
