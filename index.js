@@ -2,8 +2,7 @@
 import express from "express";
 import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
-const querystring = require('node:querystring');
-
+import querystring from "querystring";
 
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
