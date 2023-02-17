@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
-	let response = {};
+	let json_response = {};
 	if(request.params('token') != '' && request.params('consumerID') != '' && request.params('privateKey') != '' && request.params('keyVersion') != ''){
 
 		const data = {
@@ -60,7 +60,7 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	} else {
 
-		response ={
+		json_response = {
 			"request":	false,
 			"error":	"Missing required fields! Please try again..."
 		}
@@ -68,7 +68,7 @@ app.post("/getWalmartCredentials", function(request, response){
 	}
 
 	response.setHeader('Content-Type', 'application/json');
-	response.end(JSON.stringify(response));
+	response.end(JSON.stringify(json_response));
 	
 });
 
