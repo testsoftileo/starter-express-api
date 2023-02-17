@@ -68,6 +68,8 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	}
 
+	console.log('123456789');
+
 	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(json_response));
 	
