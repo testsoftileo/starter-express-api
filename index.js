@@ -7,7 +7,7 @@ let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
 	let json_response = {};
-	if(request.params('token') != '' && request.params('consumerID') != '' && request.params('privateKey') != '' && request.params('keyVersion') != ''){
+	if(request.query['token'] != '' && request.query['consumerID'] != '' && request.query['privateKey'] != '' && request.query['keyVersion'] != ''){
 
 		const data = {
 			consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
