@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
-	if(request.test){
+	if(request.param('test') != ''){
 
 		console.log('123');
 
