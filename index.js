@@ -2,12 +2,13 @@
 import express from "express";
 import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
-// let express = require("express");
-// let NodeRSA = require("node-rsa");
-// let fetch = require("fetch");
-let app = express();
 
-app.get("/", function(request, response){
+let app = express();
+app.get("/getWalmartCredentials", function(request, response){
+
+	request.on('data', chunk => {
+		console.log(chunk);
+	});
 
 	const data = {
 		consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
@@ -57,57 +58,9 @@ app.get("/", function(request, response){
 		"CONSUMERID": hashList["WM_CONSUMER.ID"],
 		"KEY_VERSION": hashList["WM_SEC.KEY_VERSION"],
 	}
-	
-	console.log(generateWalmartHeaders);
 
 	response.setHeader('Content-Type', 'application/json');
     response.end(JSON.stringify(generateWalmartHeaders));
-
-	// fetch(`https://developer.api.walmart.com/api-proxy/service/affil/product/v2/items/2608995260?publisherId=${keyData.impactId}`, {
-	// 	method: 'GET',
-	// 	headers: {
-	// 		"WM_SEC.AUTH_SIGNATURE": signature_enc,
-	// 		"WM_CONSUMER.INTIMESTAMP": hashList["WM_CONSUMER.INTIMESTAMP"],
-	// 		"WM_CONSUMER.ID": hashList["WM_CONSUMER.ID"],
-	// 		"WM_SEC.KEY_VERSION": hashList["WM_SEC.KEY_VERSION"],
-	// 	}
-	// })
-    // .then(response => response.json())
-    // .then(response => function(response){
-
-		
-
-	// })
-    // .catch(error => function(error){
-
-		
-
-	// });
-
-	// fetch('http://thedailyfinds.local/users.json')
-	// .then((response) => response.json())
-	// .then(function(data){
-
-	// 	// console.log(data);
-	// 	response.end("data");
-
-	// });
-
-
-	// fetch('https://www.google.com/', {
-	// 	method: 'POST'
-	// })
-	// .then((data) => {
-		
-	// 	response.writeHead(200, { 'Content-Type': 'text/html' });
-	// 	response.end(data);
-
-	// })
-	// .catch((error) => {
-		
-	// 	response.end(error);
-
-	// });
 	
 });
 
