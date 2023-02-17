@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
-	console.log(request.query['test']);
+	console.log(request.query);
 	
 	let json_response = {};
 	if(request.query['token'] != 'undefined' && request.query['consumerID'] != 'undefined' && request.query['privateKey'] != 'undefined' && request.query['keyVersion'] != 'undefined'){
