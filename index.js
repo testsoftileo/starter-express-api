@@ -4,7 +4,7 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 
 let app = express();
-app.get("/getWalmartCredentials", function(request, response){
+app.post("/getWalmartCredentials", function(request, response){
 
 	request.on('data', chunk => {
 		console.log(chunk);
