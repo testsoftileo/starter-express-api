@@ -7,6 +7,7 @@ let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
 	console.log(request.query);
+	console.log("123");
 
 	const data = {
 		consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
