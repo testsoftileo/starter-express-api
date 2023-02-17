@@ -9,8 +9,7 @@ app.post("/getWalmartCredentials", function(request, response){
 	let json_response = {};
 	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
 
-		console.log(request.query['token']);
-		if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc'){
+		if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH67Fp4Sjs4qMqRXe9zpVcUc'){
 
 			const data = {
 				consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
