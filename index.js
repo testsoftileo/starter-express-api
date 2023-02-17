@@ -4,10 +4,11 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 import querystring from "querystring";
 
+let body = "";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
-	let body = "";
+
 	request.on('data', chunk => {
         body += chunk.toString(); // convert Buffer to string
     });
