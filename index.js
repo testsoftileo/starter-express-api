@@ -60,6 +60,7 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	} else {
 
+		console.log('123');
 		json_response = {
 			"request":	false,
 			"error":	"Missing required fields! Please try again..."
