@@ -4,6 +4,12 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 
 let app = express();
+// express.json()
+app.use(express.json([options]))
+
+// express.urlencoded()
+app.use(express.urlencoded([options]))
+
 app.post("/getWalmartCredentials", function(request, response){
 
 	console.log(request.body);
