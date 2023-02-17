@@ -2,29 +2,15 @@
 import express from "express";
 import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
-import querystring from "querystring";
 
-let body = "";
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
 
-
-	request.on('data', chunk => {
-        body += chunk.toString(); // convert Buffer to string
-    });
-
-	request.on('end', () => {
-        console.log(body);
-        // res.end('ok');
-    });
-
-	// console.log(request.body);
 	let json_response = {};
-	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
+	// if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
 
-		if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH67Fp4Sjs4qMqRXe9zpVcUc'){
+		// if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH67Fp4Sjs4qMqRXe9zpVcUc'){
 
-			// console.log(request.query);
 			const data = {
 				consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
 				privateKey: `MIIEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc9Grdb08+8OQ
@@ -83,27 +69,27 @@ app.post("/getWalmartCredentials", function(request, response){
 				"error_type": false
 			}
 
-		} else {
+		// } else {
 
-			json_response = {
-				"request": false,
-				"data": false,
-				"error": "Token is invalid! Please try again...",
-				"error_type": 2
-			}
+		// 	json_response = {
+		// 		"request": false,
+		// 		"data": false,
+		// 		"error": "Token is invalid! Please try again...",
+		// 		"error_type": 2
+		// 	}
 
-		}
+		// }
 
-	} else {
+	// } else {
 
-		json_response = {
-			"request": false,
-			"data": false,
-			"error": "Missing required fields! Please try again...",
-			"error_type": 1
-		}
+	// 	json_response = {
+	// 		"request": false,
+	// 		"data": false,
+	// 		"error": "Missing required fields! Please try again...",
+	// 		"error_type": 1
+	// 	}
 
-	}
+	// }
 
 	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(json_response));
