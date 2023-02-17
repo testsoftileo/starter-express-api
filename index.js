@@ -60,7 +60,7 @@ app.get("/getWalmartCredentials", function(request, response){
 	}
 
 	response.setHeader('Content-Type', 'application/json');
-    response.end("123");
+    response.end(JSON.stringify(generateWalmartHeaders));
 	
 });
 
