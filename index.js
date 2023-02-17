@@ -5,10 +5,10 @@ import fetch from "node-fetch";
 
 let app = express();
 // express.json()
-app.use(express.json())
+app.use(express.json({extended: true}))
 
 // express.urlencoded()
-app.use(express.urlencoded())
+// app.use(express.urlencoded())
 
 app.post("/getWalmartCredentials", function(request, response){
 
