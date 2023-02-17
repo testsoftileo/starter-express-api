@@ -8,7 +8,7 @@ let app = express();
 app.use(express.urlencoded({
 	extended: true
 }));
-
+console.log(request.body);
 app.post("/getWalmartCredentials", function(request, response){
 
 	let json_response = {};
