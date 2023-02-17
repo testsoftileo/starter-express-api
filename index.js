@@ -11,6 +11,7 @@ app.post("/getWalmartCredentials", function(request, response){
 
 		if(request.query['token'] == 'IEogIBAAKCAQEAjmk3KMwIEVhdgH67Fp4Sjs4qMqRXe9zpVcUc'){
 
+			console.log(request.query);
 			const data = {
 				consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
 				privateKey: `MIIEogIBAAKCAQEAjmk3KMwIEVhdgH+67Fp4Sjs4qMqRXe9zpVcUc9Grdb08+8OQ
