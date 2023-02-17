@@ -68,8 +68,6 @@ app.post("/getWalmartCredentials", function(request, response){
 				"error": false,
 				"error_type": false
 			}
-	
-			console.log('123456');
 
 		} else {
 
@@ -84,7 +82,6 @@ app.post("/getWalmartCredentials", function(request, response){
 
 	} else {
 
-		console.log('123');
 		json_response = {
 			"request": false,
 			"data": false,
@@ -93,8 +90,6 @@ app.post("/getWalmartCredentials", function(request, response){
 		}
 
 	}
-
-	console.log('123456789');
 
 	response.setHeader('Content-Type', 'application/json');
 	response.end(JSON.stringify(json_response));
