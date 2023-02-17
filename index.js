@@ -4,7 +4,13 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 
 let app = express();
-app.get("/getWalmartCredentials", function(request, response){
+app.post("/getWalmartCredentials", function(request, response){
+
+	if(request.test){
+
+		console.log('123');
+
+	}
 
 	const data = {
 		consumerID: "6368d199-ccb2-4d47-9765-6b559e729b6d",
