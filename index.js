@@ -60,7 +60,9 @@ app.post("/getWalmartCredentials", function(request, response){
 
 		json_response = {
 			"request": true,
-			"data":	generateWalmartHeaders,
+			"data":	{
+				"headers": generateWalmartHeaders
+			},
 			"error": false,
 			"error_type": false
 		}
