@@ -4,10 +4,9 @@ import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
 
 let app = express();
-
-console.log(request.query);
 app.post("/getWalmartCredentials", function(request, response){
 
+	console.log(request.query);
 	let json_response = {};
 	if(typeof request.query['token'] != 'undefined' && request.query['token'] != '' && typeof request.query['consumerID'] != 'undefined' && request.query['consumerID'] != '' && typeof request.query['privateKey'] != 'undefined' && request.query['privateKey'] != '' && typeof request.query['keyVersion'] != 'undefined' && request.query['keyVersion'] != ''){
 
