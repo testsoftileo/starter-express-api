@@ -2,7 +2,6 @@
 import express from "express";
 import NodeRSA from "node-rsa";
 import fetch from "node-fetch";
-import { parse }  from "querystring";
 
 let app = express();
 app.post("/getWalmartCredentials", function(request, response){
@@ -13,7 +12,7 @@ app.post("/getWalmartCredentials", function(request, response){
     });
 
 	request.on('end', () => {
-        console.log(parse(body));
+        console.log(body);
         // res.end('ok');
     });
 
