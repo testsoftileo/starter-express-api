@@ -58,6 +58,8 @@ app.post("/getWalmartCredentials", function(request, response){
 			"KEY_VERSION": hashList["WM_SEC.KEY_VERSION"],
 		}
 
+		console.log('123456');
+
 	} else {
 
 		console.log('123');
