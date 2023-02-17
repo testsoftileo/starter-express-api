@@ -14,7 +14,7 @@ app.post("/getWalmartCredentials", function(request, response){
     });
 
 	request.on('end', () => {
-        console.log("reee:" + querystring.parse(body));
+        console.log(body);
         // res.end('ok');
     });
 
