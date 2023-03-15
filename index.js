@@ -33,7 +33,7 @@ app.post("/getWalmartCredentials", function(request, response){
 				L6x8ptv+qTaOr0GBUj3myjhIYobjbZosW5jX30LLoKl8wSjaOo6MUtlUd0K8P1Kb0/wn/b
 				8HOUrnWg8B1xAYdp73y3Z56UNYvCd/upRU5AwXnn2tY579GvsciDiR/IeZV15NMKlWdWG/
 				mCosP7GqW2+w==`,
-				keyVersion: 1
+				keyVersion: 4
 			}
 			
 			const { privateKey, consumerID, keyVersion } = data;
