@@ -46,7 +46,7 @@ app.post("/getWalmartCredentials", function(request, response){
 				"WM_CONSUMER.ID": consumerID,
 				"WM_CONSUMER.INTIMESTAMP": Date.now().toString(),
 				"WM_SEC.KEY_VERSION": keyVersion,
-			};
+			}; 
 			
 			const sortedHashString = `${hashList["WM_CONSUMER.ID"]}\n${hashList["WM_CONSUMER.INTIMESTAMP"]}\n${hashList["WM_SEC.KEY_VERSION"]}\n`;
 			const signer = new NodeRSA(privateKey, "pkcs1");
