@@ -13,7 +13,8 @@ app.post("/getWalmartCredentials", function(request, response){
 
 			const data = {
 				consumerID: "72508688-7d68-4876-9d6c-26de7e8ed3f0",
-				privateKey: `MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC8onzsYIR0Gsq6
+				privateKey: `-----BEGIN PRIVATE KEY-----
+				MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC8onzsYIR0Gsq6
 				K1F3t0sUyvXkU7YwoyY57+3DxL+43LO1bUh0FCyPV8ebYZKFAJR94X9MspxN++eC
 				Xrqf7mDu0ddhRsTrL7fymr/54tDSPQq34ZerQ3Dr/lXmUdexMENQFtJ0PMcYjfm7
 				ob5y4d0+g5gzVU9FQoYkSDC2gaUQFOmd6g+JDK2W41KrB/BKGJumU2BIlY8IE/qH
@@ -38,7 +39,8 @@ app.post("/getWalmartCredentials", function(request, response){
 				B1o/cmzfAzsGYed4PAI2Lf2ohFwaRynUhFlJYr961QKBgQCUlssUS345sOz9Ge1Y
 				3ivrRFsAkNydnUClsvjnUaDJ1KySG1/nJOlCd8jqOAJY+i/vZX7Jhoh9jBvuPOQx
 				B2aHzfgLH/4oMmEeQ3/beEi+jYSH/vdFkXqS5KmwRjKGdQX5zslWSXQa9etZCUPC
-				fzJCet2PdtfaLvfEUjhbDeU7xw==`, 
+				fzJCet2PdtfaLvfEUjhbDeU7xw==
+				-----END PRIVATE KEY-----`, 
 				keyVersion: 6
 			}
 			
